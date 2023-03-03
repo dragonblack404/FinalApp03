@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ComponentesMaterialDesign.MainActivity">
+    <item android:id="@+id/nav_item_one"
+        android:icon="@drawable/ic_data"
+        android:title="@string/item1_nav" />
+    <group>
+        <item android:id="@+id/nav_item_two"
+            android:icon="@drawable/ic_image"
+            android:title="@string/item2_nav" />
+        <item android:id="@+id/nav_item_three"
+            android:icon="@drawable/ic_audio"
+            android:title="@string/item3_nav" />
+        <item android:id="@+id/nav_item_four"
+            android:icon="@drawable/ic_camera"
+            android:title="@string/item4_nav" />
+    </group>
+
+</menu>
