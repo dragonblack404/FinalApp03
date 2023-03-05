@@ -2,7 +2,8 @@
     <string name="app_name">FinalApp03</string>
     <string name="item1_nav">Actividad 1</string>
     <string name="item2_nav">Actividad 2</string>
-    <string name="item3_nav">Actividad 3</string>
+    <string name="item3_nav">Multimedia</string>
     <string name="item4_nav">Actividad 4</string>
     <string name="titulo_nv">Aplicacion final 03</string>
+    <string name="titulo_grab">Actividad Multimedia</string>
 </resources>

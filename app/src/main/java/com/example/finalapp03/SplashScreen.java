@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SplashScreen extends AppCompatActivity {
 
     // Constante de tiempo de duración para el Splash Screen
-    final static int TIEMPO = 3000;
+    final static int TIEMPO = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
