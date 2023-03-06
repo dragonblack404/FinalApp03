@@ -34,7 +34,7 @@ public class FragRes extends Fragment {
     public void onResume() {
         super.onResume();
         DisplayMetrics metrics = new DisplayMetrics();
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        super.getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
         int width = metrics.widthPixels;
         int height = metrics.heightPixels;
         int dpi = (int) getResources().getDisplayMetrics().densityDpi;

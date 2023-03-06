@@ -27,15 +27,15 @@ public class FragSensor extends Fragment implements SensorEventListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_light_sensor, container, false);
-        lightTextView = rootView.findViewById(R.id.light_text_view);
-        return rootView;
+        View v = inflater.inflate(R.layout.fragment_light_sensor, container, false);
+        lightTextView = v.findViewById(R.id.light_text_view);
+        return v;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        sensorManager = (SensorManager) getContext().getSystemService(Context.SENSOR_SERVICE);
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     }
 
@@ -53,16 +53,20 @@ public class FragSensor extends Fragment implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float lux = event.values[0];
-        String lightSituation;
-        if (lux < 100) {
-            lightSituation = "Oscuro";
-        } else if (lux >= 100 && lux <= 2000) {
-            lightSituation = "Normal";
-        } else {
-            lightSituation = "Brillante";
+        String lightSituation = null;
+        if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
+            float lux = event.values[0];
+            if (lux < 100) {
+                lightSituation = "Oscuro";
+                lightTextView.setText("Situación lumínica: " + lightSituation);
+            } else if (lux >= 100 && lux <= 2000) {
+                lightSituation = "Normal";
+                lightTextView.setText("Situación lumínica: " + lightSituation);
+            } else {
+                lightSituation = "Brillante";
+                lightTextView.setText("Situación lumínica: " + lightSituation);
+            }
         }
-        lightTextView.setText("Situación lumínica: " + lightSituation);
     }
 
     @Override

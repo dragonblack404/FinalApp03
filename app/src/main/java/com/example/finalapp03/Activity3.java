@@ -39,6 +39,7 @@ public class Activity3 extends AppCompatActivity {
     private MediaPlayer reproductor;
     private AudioManager manager;
     private String archivoSalida = null;
+    private boolean hayAudio = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +128,6 @@ public class Activity3 extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
-
         });
 
         frequencySeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -142,12 +142,10 @@ public class Activity3 extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
 
@@ -206,20 +204,22 @@ public class Activity3 extends AppCompatActivity {
             grabador.release();
             grabador = null;
             Toast.makeText(this, "Grabacion finalizada:)", Toast.LENGTH_SHORT).show();
+            hayAudio = true;
         }
     }
 
     private void reproducirAudio() {
-        try {
-            reproductor = new MediaPlayer();
-            reproductor.setDataSource(getRecordingFilePath());
-            reproductor.prepare();
-            reproductor.start();
-            Toast.makeText(this, "Reproduciendo grabación", Toast.LENGTH_LONG).show();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (hayAudio) {
+            try {
+                reproductor = new MediaPlayer();
+                reproductor.setDataSource(getRecordingFilePath());
+                reproductor.prepare();
+                reproductor.start();
+                Toast.makeText(this, "Reproduciendo grabación", Toast.LENGTH_LONG).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
-
 
 }

@@ -89,10 +89,10 @@ public class Activity4 extends AppCompatActivity {
         Activity4Adapter adapter = new Activity4Adapter(getSupportFragmentManager());
 
         // Agregamos los fragmentos al adaptador
-        adapter.addFragment(new FragRes(), "Funcionalidad 1");
-        adapter.addFragment(new FragBateria(), "Funcionalidad 2");
-        adapter.addFragment(new FragSensor(), "Funcionalidad 3");
-        adapter.addFragment(new FragLocation(), "Funcionalidad 4");
+        adapter.addFragment(new FragRes(), getString(R.string.tab1));
+        adapter.addFragment(new FragBateria(), getString(R.string.tab2));
+        adapter.addFragment(new FragSensor(), getString(R.string.tab3));
+        adapter.addFragment(new FragLocation(), getString(R.string.tab4));
 
         // Asociamos el adaptador al ViewPager
         viewPager.setAdapter(adapter);

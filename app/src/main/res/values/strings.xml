@@ -40,5 +40,11 @@
     <string name="pausar">Pausar</string>
     <string name="grabar">Grabar</string>
     <string name="reproducir">Reproducir</string>
+
     <string name="titulo_sql">Uso de SQLite</string>
+
+    <string name="tab4">Funcionalidad 4</string>
+    <string name="tab3">Funcionalidad 3</string>
+    <string name="tab2">Funcionalidad 2</string>
+    <string name="tab1">Funcionalidad 1</string>
 </resources>
