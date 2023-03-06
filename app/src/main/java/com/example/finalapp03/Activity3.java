@@ -58,21 +58,29 @@ public class Activity3 extends AppCompatActivity {
                 case R.id.nav_item_one:
                     // Se inicia Actividad 1
                     sendIntent = new Intent(Activity3.this, MainActivity.class);
+                    sendIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    onBackPressed();
                     startActivity(sendIntent);
                     break;
                 case R.id.nav_item_two:
                     // Se inicia Actividad 2
                     sendIntent = new Intent(Activity3.this, Activity2.class);
+                    sendIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    onBackPressed();
                     startActivity(sendIntent);
                     break;
                 case R.id.nav_item_three:
                     // Se inicia Actividad 3
                     sendIntent = new Intent(Activity3.this, Activity3.class);
+                    sendIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    onBackPressed();
                     startActivity(sendIntent);
                     break;
                 case R.id.nav_item_four:
                     // Se inicia Actividad 4
                     sendIntent = new Intent(Activity3.this, Activity4.class);
+                    sendIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    onBackPressed();
                     startActivity(sendIntent);
                     break;
             }
@@ -143,6 +151,14 @@ public class Activity3 extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, LastActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private boolean microfono() {

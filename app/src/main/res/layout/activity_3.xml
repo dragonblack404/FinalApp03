@@ -5,28 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/ic_launcher_background"
     tools:context=".Activity3">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item3_nav"
-        android:textSize="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
 
     <Button
         android:id="@+id/btn_grabar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Grabar"
+        android:layout_marginStart="20dp"
+        android:text="@string/grabar"
+        android:background="@drawable/round_button"
+        android:drawableLeft="@drawable/rec"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textGrabadora"
         tools:ignore="MissingConstraints" />
@@ -36,7 +26,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Pausar"
+        android:layout_marginEnd="20dp"
+        android:text="@string/pausar"
+        android:background="@drawable/round_button"
+        android:drawableEnd="@drawable/pause"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textGrabadora"
         tools:ignore="MissingConstraints" />
@@ -46,9 +39,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Reproducir"
+        android:background="@drawable/round_button"
+        android:drawableBottom="@drawable/play"
+        android:text="@string/reproducir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_pausar"
-        tools:layout_editor_absoluteX="132dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -57,6 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/titulo_grab"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,16 +65,16 @@
         android:id="@+id/volumeSeekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
+        android:layout_below="@id/btn_reproducir"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
-        android:layout_marginTop="72dp"
-        android:max="100"
+        android:layout_marginTop="120dp"
+        android:max="200"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:progress="50"
-        android:thumbTint="@color/red"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:progress="100"
+        android:thumbTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reproducir"
         tools:layout_editor_absoluteX="16dp" />
 
     <SeekBar
@@ -85,14 +84,14 @@
         android:layout_below="@id/volumeSeekBar"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
-        android:max="10000"
+        android:max="200"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:progress="5000"
-        android:thumbTint="@color/yellow"
+        android:progress="100"
+        android:thumbTint="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/volumeSeekBar"
-        app:layout_constraintVertical_bias="0.282"
+        app:layout_constraintVertical_bias="0.14"
         tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

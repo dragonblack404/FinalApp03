@@ -4,6 +4,41 @@
     <string name="item2_nav">Actividad 2</string>
     <string name="item3_nav">Multimedia</string>
     <string name="item4_nav">Actividad 4</string>
+
     <string name="titulo_nv">Aplicacion final 03</string>
     <string name="titulo_grab">Actividad Multimedia</string>
+    <string name="titulo_func">Actividad Multimedia</string>
+
+
+    <string name="titulo_arma1">M16</string>
+    <string name="titulo_arma2">AK-47</string>
+    <string name="titulo_arma3">M4A1</string>
+    <string name="titulo_arma4">SP-X 80</string>
+    <string name="titulo_arma5">G36C</string>
+    <string name="titulo_arma6">model</string>
+    <string name="titulo_arma7">RPG</string>
+    <string name="titulo_arma8">Colt 1911</string>
+    <string name="titulo_arma9">UMP-45</string>
+    <string name="titulo_arma10">AA-12</string>
+
+    <string name="desc_arma1">El M16 (oficialmente Fusil, Calibre 5,56 mm, M16)
+        es la designación de las Fuerzas Armadas de los Estados Unidos.</string>
+    <string name="desc_arma2">El Avtomat Kalashnikova modelo 1947 o más conocido por el acrónimo AK-47
+        es un fusil de asalto soviético, de calibre 7,62 mm,</string>
+    <string name="desc_arma3">La M4A1 perteneciente a la familia de fusiles de asalto automáticos en
+        versión carabina, derivados del fusil AR-15</string>
+    <string name="desc_arma4">El Accuracy International Arctic Warfare es un fusil de francotirador diseñado
+        y fabricado por la compañía británica Accuracy International.</string>
+    <string name="desc_arma5">El Heckler Y Koch G36 es un fusil de asalto de calibre 5,56 mm diseñado
+        por Heckler Y Koch en Alemania</string>
+    <string name="desc_arma6">La Winchester Modelo 1887 y la Winchester Modelo 1901 eran escopetas de palanca</string>
+    <string name="desc_arma7">Capaz de disparar un cohete no guiado equipado con una ojiva explosiva.</string>
+    <string name="desc_arma8">La M1911 es una pistola semiautomática de acción simple, alimentada por cargador,
+        operada por retroceso directo y que dispara el cartucho .45 ACP.​</string>
+    <string name="desc_arma9">El UMP es un subfusil que ha sido adoptado por diversas fuerzas armadas y agencias policiales</string>
+    <string name="desc_arma10">La Auto Assault-12, conocida como AA-12 es una escopeta semiautomática desarrollada por Maxwell Atchisson</string>
+    <string name="pausar">Pausar</string>
+    <string name="grabar">Grabar</string>
+    <string name="reproducir">Reproducir</string>
+    <string name="titulo_sql">Uso de SQLite</string>
 </resources>
